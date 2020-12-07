@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+
 
 class PostController extends Controller
 {
@@ -14,7 +17,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+       $posts = Post::orderBy('created_at','desc')->get();
+       return view('admin.index', compact('posts'));
     }
 
     /**
@@ -42,6 +46,24 @@ class PostController extends Controller
             'body' => 'required|min:5|max:500',
             'img' => 'image'
         ]);
+
+        $data['user_id'] = Auth::id();
+        $data['slug'] = Str::slug($data['title'],'-');
+        // nuova istanza
+        $newPost = new Post();
+
+        if (!empty($data['img'])) {
+            $data['img'] = Storage::disk('public')->put('images', $data['img']);
+        }
+        // la riempio con i dati
+        $newPost->fill($data);
+
+        // equivale a fare INSERT
+        $saved = $newPost->save();
+
+        if($saved){
+            return redirect()->route('posts.index');
+        }
     }
 
     /**
@@ -86,6 +108,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('posts.index')->with('status','Hai cancellato correttamente il post');
     }
 }
