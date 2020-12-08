@@ -6,6 +6,9 @@ use App\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+
 
 
 class PostController extends Controller
@@ -85,7 +88,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('admin.edit', compact('post'));
     }
 
     /**
@@ -97,7 +100,32 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        // array di dati
+        $data = $request->all();
+
+        // dd($data); mi restituisce l'array del post che voglio storare
+        $request->validate([
+            'title' => 'required|min:5|max:100',
+            'body' => 'required|min:5|max:500',
+            'img' => 'image'
+        ]);
+
+        $data['slug'] = Str::slug($data['title'],'-');
+        $data['updated_at'] = Carbon::now('Europe/Rome');
+
+        if (!empty($data['img'])) {
+            // cancella img precedente
+            if(!empty($post->img)){
+                Storage::disk('public')->delete($post->img);
+            }
+            $data['img'] = Storage::disk('public')->put('images', $data['img']);
+        }
+
+        $updated = $post->update($data);
+
+        if($updated){
+            return redirect()->route('posts.index')->with('statusModifica', 'Hai modificato correttamente il post con il titolo '.$post->title);
+        }
     }
 
     /**
@@ -109,6 +137,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route('posts.index')->with('status','Hai cancellato correttamente il post');
+        return redirect()->route('posts.index')->with('status','Hai cancellato il post con il titolo: "'.$post->title.'"');
     }
 }
