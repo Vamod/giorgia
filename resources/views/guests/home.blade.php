@@ -5,16 +5,18 @@
         <div class="images">
             <img class="active first" src="{{ asset('img/corn-field.jpg') }}" alt="corn-field">
             <img src="{{ asset('img/flowers.jpg') }}" alt="flowers">
-            <img src="https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg" alt="">
-            <img class="last" src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg" alt="">
+            <img class="last" src="{{ asset('img/grass.jpg') }}" alt="">
         </div>
     </div>
     <section class="about-me">
         <div class="container">
-            <h2 class="about-me-title">ABOUT ME</h2>
-            <p class="about-me-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga vel laboriosam amet
-                iste dolorem suscipit nemo autem consectetur repudiandae placeat et facere corporis asperiores tenetur,
-                impedit temporibus. Voluptatem, enim nostrum.</p>
+            <h2 class="about-me-title text-center">Chi sono</h2>
+            <p class="about-me-p">Sono la dott.ssa Giorgia Cesarini, psicologa iscritta all'albo con matricola 22047 e psicoterapeuta ad orientamento Sistemico - Relazionale (in formazione).
+                                Laureata presso l'Università La Sapienza di Roma in Psicologia dello Sviluppo, dell'Educazione e del Benessere.
+                                Specializzata nel trattamento dei Disturbi dello Spettro Autistico, ADHD e Disabilità psichica. Offro consulenza psicologica a famiglie e coppie genitoriali attraverso Parent Training e interventi di sostegno alla genitorialità.
+                                Esperta in Disturbi Specifici dell'Apprendimento e formata come Tutor allo Studio, svolgo interventi specialistici di training e potenziamento per bambini e ragazzi con DSA.
+                                Per tutti i miei interventi utilizzo un approccio sistemico - relazionale, considerando il singolo individuo imprescindibilmente legato ai suoi contesti relazionali e al suo sistema familiare.
+                                L'ottica sistemica prevede dunque una presa in carico globale della persona, in cui la famiglia possiede un ruolo attivo e partecipe, finalizzato al raggiungimento del cambiamento desiderato.</p>
         </div>
     </section>
 

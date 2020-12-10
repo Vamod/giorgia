@@ -2,7 +2,7 @@ require('./bootstrap');
 
 $(document).ready(function(){
     // per cambiare automaticamente le immagini nella home
-    setInterval(nextImage, 2000);
+    setInterval(nextImage, 6000);
 
     // per cambiare sfondo alla navbar con lo scroll
         $(document).scroll(function() {

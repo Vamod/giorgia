@@ -10923,11 +10923,13 @@ html {
 }
 
 .navbar .nav-title {
+  font-size: 28px;
   color: black;
   border-bottom: 2px solid orange;
 }
 
 .navbar .nav-descr {
+  color: black;
   font-size: 14px;
 }
 
@@ -10940,7 +10942,7 @@ html {
   position: relative;
   margin: auto;
   width: 100%;
-  height: calc(100vh - 70px);
+  height: 100vh;
 }
 
 .container-home .slider-wrapper .images {
@@ -10959,6 +10961,29 @@ html {
 
 .container-home .slider-wrapper .images img.active {
   display: inline-block;
+}
+
+.container-home section.about-me {
+  padding: 2.5rem 0;
+}
+
+.container-home section.posts {
+  background-color: #d4d9df;
+  padding: 2.5rem 0;
+}
+
+.container-home section.posts .card-group .card {
+  width: calc((100% - 1.25rem) / 2);
+  -o-box-shadow: 0px 9px 71px 8px #565656;
+  box-shadow: 0px 9px 71px 8px #565656;
+}
+
+.container-home section.posts .card-group .card .card-img-top {
+  padding: 1.25rem;
+}
+
+.container-home section.posts .card-group .card:nth-child(2) {
+  margin-left: 1.25rem;
 }
 
 .container-home #map {
