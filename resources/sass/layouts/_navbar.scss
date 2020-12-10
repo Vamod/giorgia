@@ -1,3 +1,22 @@
 .navbar{
+    width: 100%;
     height:70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    
+    .nav-title{
+        color: black;
+        border-bottom: 2px solid orange;
+    }
+    .nav-descr{
+        font-size: 14px;
+    }
+}
+
+// per cambiare la navbar allo scroll
+.scrolled{
+    background-color: white;
+    transition: background-color 200ms linear;
 }

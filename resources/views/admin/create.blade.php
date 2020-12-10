@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
+    <div class="container" style="margin-top: 70px;">
         {{-- enctype aggiunto per img, serve per inviare dati che non siano testo --}}
         <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
             {{-- Laravel automatically generates a CSRF "token" for each active user session managed by the application.

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 70px;">
     @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
