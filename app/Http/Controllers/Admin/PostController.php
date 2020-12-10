@@ -46,7 +46,7 @@ class PostController extends Controller
         $data = $request->all();
         $request->validate([
             'title' => 'required|min:5|max:100',
-            'body' => 'required|min:5|max:500',
+            'body' => 'required|min:5|max:5000',
             'img' => 'image'
         ]);
 

@@ -12,4 +12,10 @@ class PostController extends Controller
 
         return view('guests.home', compact('posts'));
     }
+
+    public function show($slug){
+        // si ferma al primo slug che matcha
+        $post = Post::where('slug', $slug)->first();
+        return view('guests.show', compact('post'));
+    }
 }

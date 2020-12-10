@@ -23,11 +23,13 @@
             <div class="card-group">
                 @foreach($posts as $post)
                     <div class="card" style="width: 18rem;">
+                        @if ($post->img != null)
                         <img src="{{ Storage::url($post->img) }}" class="card-img-top" alt="{{ $post->title }}">
+                        @endif                       
                         <div class="card-body">
                             <h5 class="card-title">{{ $post->title }}</h5>
                             <p class="card-text">{{ $post->body }}</p>
-                            <a href="#" class="btn btn-primary">Vai all'articolo</a>
+                            <a href="{{ route('guests.show', $post->slug) }}" class="btn btn-primary">Vai all'articolo</a>
                         </div>
                     </div>
                 @endforeach

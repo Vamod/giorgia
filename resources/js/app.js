@@ -5,7 +5,7 @@ $(document).ready(function(){
     setInterval(nextImage, 2000);
 
     // per cambiare sfondo alla navbar con lo scroll
-        $(document).scroll(function () {
+        $(document).scroll(function() {
           var $nav = $(".navbar");
           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
