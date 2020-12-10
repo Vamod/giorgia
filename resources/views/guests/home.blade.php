@@ -7,6 +7,16 @@
             <img src="{{ asset('img/flowers.jpg') }}" alt="flowers">
             <img class="last" src="{{ asset('img/grass.jpg') }}" alt="">
         </div>
+        <div class="main-text">
+            <p class="cite">
+                <i class="fas fa-quote-left"></i>      
+                            La vita non è quello che dovrebbe essere. <br>
+                             E' quello che è. <br>
+                             E' come l'affrontiamo che fa la differenza.
+                <i class="fas fa-quote-right"></i>            
+            </p> 
+            <cite>Virginia Satir</cite>
+        </div>
     </div>
     <section class="about-me">
         <div class="container">
