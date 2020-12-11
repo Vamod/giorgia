@@ -11019,6 +11019,7 @@ html {
 
 .container.show {
   margin-top: 80px;
+  padding-top: 40px;
 }
 
 .container.show .card {
@@ -11027,7 +11028,7 @@ html {
 }
 
 .container.show .card .card-img-top-box {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 120px);
 }
 
 .container.show .card .card-img-top-box img.card-img-top {
@@ -11047,6 +11048,18 @@ html {
 }
 
 .container.articoli .card-group .card {
-  flex-basis: calc(100% / 4);
+  flex-basis: calc((100% - 3.75rem) / 4);
+  flex-grow: 0;
+  margin-bottom: 1.25rem;
+  -o-box-shadow: 0px 9px 71px 8px #565656;
+  box-shadow: 0px 9px 71px 8px #565656;
+}
+
+.container.articoli .card-group .card .card-img-top {
+  padding: 1.25rem;
+}
+
+.container.articoli .card-group .card:not(:nth-child(4n)) {
+  margin-right: 1.25rem;
 }
 

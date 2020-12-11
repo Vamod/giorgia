@@ -4,7 +4,19 @@
     .card-group{
         flex-wrap: wrap;
         .card{
-            flex-basis: calc(100% / 4);
+            flex-basis: calc((100% - 3.75rem) / 4)  ;
+            flex-grow: 0;
+            margin-bottom: 1.25rem;
+            -webkit-box-shadow: 0px 9px 71px 8px #565656;
+            -moz-box-shadow: 0px 9px 71px 8px #565656;
+            -o-box-shadow: 0px 9px 71px 8px #565656;
+            box-shadow: 0px 9px 71px 8px #565656;
+            .card-img-top{
+                padding: 1.25rem;
+            } 
         }
+        .card:not(:nth-child(4n)) {
+            margin-right: 1.25rem;;
+          }
     }
 }
