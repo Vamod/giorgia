@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container" style="margin-top: 70px;">
+<div class="container" style="margin-top: 80px;">
     @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
@@ -11,15 +11,15 @@
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Titolo</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Modifica</th>
+                <th scope="col">Cancella</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($posts as $post)
             <tr>
                 <td>{{$post->title}}</td>
-                <td><a href="{{ route('posts.edit', $post->id) }}">Edit</a></td>
+                <td><a href="{{ route('posts.edit', $post->id) }}">Modifica</a></td>
                 <td>
                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                         @csrf

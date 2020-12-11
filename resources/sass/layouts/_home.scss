@@ -26,8 +26,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
             
-            .cite{
-                font-size: 24px;
+            .cite-text{
+                font-size: 30px;
+                font-style: italic;
+            }
+            cite{
+                font-size: 16px;
             }
         }   
     }
@@ -53,10 +57,4 @@
               }
         }
     }
-    #map {
-        height: 400px;
-        /* The height is 400 pixels */
-        width: 100%;
-        /* The width is the width of the web page */
-      }
 }

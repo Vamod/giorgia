@@ -5,10 +5,10 @@
         <div class="images">
             <img class="active first" src="{{ asset('img/corn-field.jpg') }}" alt="corn-field">
             <img src="{{ asset('img/flowers.jpg') }}" alt="flowers">
-            <img class="last" src="{{ asset('img/grass.jpg') }}" alt="">
+            <img class="last" src="{{ asset('img/grass.jpg') }}" alt="grass">
         </div>
         <div class="main-text">
-            <p class="cite">
+            <p class="cite-text">
                 <i class="fas fa-quote-left"></i>      
                             La vita non è quello che dovrebbe essere. <br>
                              E' quello che è. <br>
@@ -39,18 +39,14 @@
                         <img src="{{ Storage::url($post->img) }}" class="card-img-top" alt="{{ $post->title }}">
                         @endif                       
                         <div class="card-body">
-                            <h5 class="card-title">{{ $post->title }}</h5>
-                            <p class="card-text">{{ $post->body }}</p>
+                            <h5 class="card-title">{{ Str::limit($post->title, 60)}}</h5>
+                            <p class="card-text">{{ Str::limit($post->body, 60)}}</p>
                             <a href="{{ route('guests.show', $post->slug) }}" class="btn btn-primary">Vai all'articolo</a>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
-    </section>
-
-    <section class="map">
-        <div id="map"></div>
     </section>
 </div>
 @endsection

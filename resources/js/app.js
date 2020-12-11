@@ -12,14 +12,15 @@ $(document).ready(function(){
     
 });
 
-    // CAROSELLO HOMEPAGE
-    //funzione next
-    function nextImage(){
-        var activeImage = $('img.active');
-        activeImage.removeClass('active');
-        if(activeImage.hasClass('last')){
-            $('img.first').addClass('active');
-        } else {
-        activeImage.next().addClass('active');
-        }
+// CAROSELLO HOMEPAGE
+//funzione next
+function nextImage(){
+    var activeImage = $('img.active');
+    activeImage.removeClass('active');
+    if(activeImage.hasClass('last')){
+        $('img.first').addClass('active');
+    } else {
+    activeImage.next().addClass('active');
     }
+}
+

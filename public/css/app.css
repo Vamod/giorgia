@@ -10915,7 +10915,7 @@ html {
 
 .navbar {
   width: 100%;
-  height: 70px;
+  height: 80px;
   position: fixed;
   left: 0;
   top: 0;
@@ -10923,14 +10923,29 @@ html {
 }
 
 .navbar .nav-title {
-  font-size: 28px;
   color: black;
   border-bottom: 2px solid orange;
+}
+
+.navbar .nav-title .title-name {
+  font-size: 26px;
 }
 
 .navbar .nav-descr {
   color: black;
   font-size: 14px;
+}
+
+.navbar ul.navbar-nav li a.nav-link {
+  color: black;
+}
+
+.navbar ul.navbar-nav .selected {
+  border-bottom: 2px solid orange;
+}
+
+.navbar ul.navbar-nav a.nav-link:hover {
+  color: orange;
 }
 
 .scrolled {
@@ -10970,8 +10985,13 @@ html {
   transform: translate(-50%, -50%);
 }
 
-.container-home .slider-wrapper .main-text .cite {
-  font-size: 24px;
+.container-home .slider-wrapper .main-text .cite-text {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.container-home .slider-wrapper .main-text cite {
+  font-size: 16px;
 }
 
 .container-home section.about-me {
@@ -10997,10 +11017,36 @@ html {
   margin-left: 1.25rem;
 }
 
-.container-home #map {
-  height: 400px;
-  /* The height is 400 pixels */
-  width: 100%;
-  /* The width is the width of the web page */
+.container.show {
+  margin-top: 80px;
+}
+
+.container.show .card {
+  -o-box-shadow: 0px 9px 71px 8px #565656;
+  box-shadow: 0px 9px 71px 8px #565656;
+}
+
+.container.show .card .card-img-top-box {
+  height: calc(100vh - 80px);
+}
+
+.container.show .card .card-img-top-box img.card-img-top {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.container.articoli {
+  margin-top: 80px;
+  padding-top: 80px;
+}
+
+.container.articoli .card-group {
+  flex-wrap: wrap;
+}
+
+.container.articoli .card-group .card {
+  flex-basis: calc(100% / 4);
 }
 

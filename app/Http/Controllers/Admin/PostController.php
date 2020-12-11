@@ -106,7 +106,7 @@ class PostController extends Controller
         // dd($data); mi restituisce l'array del post che voglio storare
         $request->validate([
             'title' => 'required|min:5|max:100',
-            'body' => 'required|min:5|max:500',
+            'body' => 'required|min:5|max:5000',
             'img' => 'image'
         ]);
 

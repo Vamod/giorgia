@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Str;
 
 use App\Post;
 use Illuminate\Http\Request;
@@ -17,5 +18,10 @@ class PostController extends Controller
         // si ferma al primo slug che matcha
         $post = Post::where('slug', $slug)->first();
         return view('guests.show', compact('post'));
+    }
+
+    public function imieiarticoli(){
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        return view('guests.imieiarticoli', compact('posts'));
     }
 }

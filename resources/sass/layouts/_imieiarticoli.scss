@@ -1,0 +1,10 @@
+.container.articoli{
+    margin-top: 80px;
+    padding-top: 80px;
+    .card-group{
+        flex-wrap: wrap;
+        .card{
+            flex-basis: calc(100% / 4);
+        }
+    }
+}

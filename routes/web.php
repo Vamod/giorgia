@@ -21,6 +21,7 @@ Auth::routes();
 
 // Route::get('admin/home', 'Admin\HomeController@index')->name('home');
 
+//admin routes 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('posts', 'PostController');
@@ -28,3 +29,9 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function (
 
 Route::get('/', 'PostController@index')->name('guests.home');
 Route::get('show/{slug}', 'PostController@show')->name('guests.show');
+Route::get('imieiarticoli', 'PostController@imieiarticoli')->name('guests.imieiarticoli');
+
+// static routes
+Route::get('/chisono', 'StaticPageController@chisono')->name('guests.chisono');
+Route::get('/dicosamioccupo', 'StaticPageController@dicosamioccupo')->name('guests.dicosamioccupo');
+Route::get('/contatti', 'StaticPageController@contatti')->name('guests.contatti');
