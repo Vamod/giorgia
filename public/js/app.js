@@ -37294,7 +37294,7 @@ function nextImage() {
   } else {
     activeImage.next().addClass('active');
   }
-}
+} //per confermare cancellazione
 
 /***/ }),
 

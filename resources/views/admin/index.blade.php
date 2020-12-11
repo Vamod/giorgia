@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container" style="margin-top: 80px; padding-top: 40px;">
+<div class="container" style="margin-top: 80px; padding-top: 80px;">
     @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
@@ -24,7 +24,7 @@
                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-primary">Cancella</button>
+                        <button id="destroy"  onclick="return confirm('Giorgia sei sicura di voler cancellare?')" type="submit" class="btn btn-primary">Cancella</button>
                     </form>
                 </td>
             </tr>

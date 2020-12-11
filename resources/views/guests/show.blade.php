@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="container show">
-        <div class="card mb-3">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
             @if ($post->img != null)
             <div class="card-img-top-box">
                 <img src="{{ Storage::url($post->img) }}" class="card-img-top" alt="{{ $post->title }}">

@@ -24,3 +24,4 @@ function nextImage(){
     }
 }
 
+//per confermare cancellazione

@@ -10951,6 +10951,7 @@ html {
 .scrolled {
   background-color: white;
   transition: background-color 200ms linear;
+  box-shadow: 0px 4px 11px 0px rgba(50, 50, 50, 0.45);
 }
 
 .container-home .slider-wrapper {
@@ -11005,12 +11006,10 @@ html {
 
 .container-home section.posts .card-group .card {
   width: calc((100% - 1.25rem) / 2);
-  -o-box-shadow: 0px 9px 71px 8px #565656;
-  box-shadow: 0px 9px 71px 8px #565656;
 }
 
 .container-home section.posts .card-group .card .card-img-top {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0 1.25rem;
 }
 
 .container-home section.posts .card-group .card:nth-child(2) {
@@ -11020,11 +11019,6 @@ html {
 .container.show {
   margin-top: 80px;
   padding-top: 40px;
-}
-
-.container.show .card {
-  -o-box-shadow: 0px 9px 71px 8px #565656;
-  box-shadow: 0px 9px 71px 8px #565656;
 }
 
 .container.show .card .card-img-top-box {
@@ -11051,12 +11045,14 @@ html {
   flex-basis: calc((100% - 3.75rem) / 4);
   flex-grow: 0;
   margin-bottom: 1.25rem;
-  -o-box-shadow: 0px 9px 71px 8px #565656;
-  box-shadow: 0px 9px 71px 8px #565656;
 }
 
 .container.articoli .card-group .card .card-img-top {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.container.articoli .card-group .card .created_at {
+  font-size: 12px;
 }
 
 .container.articoli .card-group .card:not(:nth-child(4n)) {
