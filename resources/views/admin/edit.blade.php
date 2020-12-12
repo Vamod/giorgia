@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container" style="margin-top: 80px;">
+<div class="container" style="margin-top: 80px;padding-top:80px;">
     @if($errors->any())
         <div class="alert alert-danger">
             <ul>

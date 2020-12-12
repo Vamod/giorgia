@@ -29,6 +29,17 @@
             .cite-text{
                 font-size: 30px;
                 font-style: italic;
+                i.fa-quote-left{
+                    font-size: 12px;
+                    position:absolute;
+                    top: 7px;
+                    left: -20px;
+                }
+                i.fa-quote-right{
+                    font-size: 12px;
+                    position: relative;
+                    top: -10px;
+                }
             }
             cite{
                 font-size: 16px;

@@ -29,29 +29,28 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                            
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav main-link ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link {{ (url()->current() == route('guests.chisono')) ? 'selected': '' }}" href="{{ route('guests.chisono') }}">Chi sono</a>
+                                    <a class="nav-link main-menu {{ (url()->current() == route('guests.chisono')) ? 'selected': '' }}" href="{{ route('guests.chisono') }}">Chi sono</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ (url()->current() == route('guests.dicosamioccupo')) ? 'selected': '' }}" href="{{ route('guests.dicosamioccupo') }}">Di cosa mi occupo</a>
+                                    <a class="nav-link main-menu {{ (url()->current() == route('guests.dicosamioccupo')) ? 'selected': '' }}" href="{{ route('guests.dicosamioccupo') }}">Di cosa mi occupo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ (url()->current() == route('guests.imieiarticoli')) ? 'selected': '' }}" href="{{ route('guests.imieiarticoli') }}">I miei articoli</a>
+                                    <a class="nav-link main-menu {{ (url()->current() == route('guests.imieiarticoli')) ? 'selected': '' }}" href="{{ route('guests.imieiarticoli') }}">I miei articoli</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ (url()->current() == route('guests.contatti')) ? 'selected': '' }}" href="{{ route('guests.contatti') }}">Contatti</a>
+                                    <a class="nav-link main-menu {{ (url()->current() == route('guests.contatti')) ? 'selected': '' }}" href="{{ route('guests.contatti') }}">Contatti</a>
                                 </li>
                             @endif
                             {{-- <li class="nav-item">

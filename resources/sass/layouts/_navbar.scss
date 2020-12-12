@@ -19,7 +19,12 @@
     }
 
     ul.navbar-nav{
-        li .nav-link{
+        @include media-breakpoint-down(md) { 
+            li .nav-link.main-menu{
+                display: none;
+            }
+        }
+        li .nav-link.main-menu{
             color: black;
             cursor:pointer;
             position:relative;

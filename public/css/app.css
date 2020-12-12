@@ -10909,7 +10909,7 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
-html {
+body {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -10936,13 +10936,19 @@ html {
   font-size: 14px;
 }
 
-.navbar ul.navbar-nav li .nav-link {
+@media (max-width: 991.98px) {
+  .navbar ul.navbar-nav li .nav-link.main-menu {
+    display: none;
+  }
+}
+
+.navbar ul.navbar-nav li .nav-link.main-menu {
   color: black;
   cursor: pointer;
   position: relative;
 }
 
-.navbar ul.navbar-nav li .nav-link::after {
+.navbar ul.navbar-nav li .nav-link.main-menu::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -10953,11 +10959,11 @@ html {
   transition: all 0.2s;
 }
 
-.navbar ul.navbar-nav li .nav-link.selected::after {
+.navbar ul.navbar-nav li .nav-link.main-menu.selected::after {
   width: 100%;
 }
 
-.navbar ul.navbar-nav li .nav-link:hover::after {
+.navbar ul.navbar-nav li .nav-link.main-menu:hover::after {
   width: 100%;
 }
 
@@ -11006,6 +11012,19 @@ html {
 .container-home .slider-wrapper .main-text .cite-text {
   font-size: 30px;
   font-style: italic;
+}
+
+.container-home .slider-wrapper .main-text .cite-text i.fa-quote-left {
+  font-size: 12px;
+  position: absolute;
+  top: 7px;
+  left: -20px;
+}
+
+.container-home .slider-wrapper .main-text .cite-text i.fa-quote-right {
+  font-size: 12px;
+  position: relative;
+  top: -10px;
 }
 
 .container-home .slider-wrapper .main-text cite {
@@ -11061,28 +11080,32 @@ html {
   flex-wrap: wrap;
 }
 
+@media (max-width: 991.98px) {
+  .container.articoli .card-group {
+    justify-content: center;
+  }
+}
+
 .container.articoli .card-group .card {
   flex-basis: calc((100% - 3.75rem) / 4);
   flex-grow: 0;
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 991.98px) {
+  .container.articoli .card-group .card {
+    flex-basis: 100%;
+    margin-right: 0 !important;
+  }
+}
+
 .container.articoli .card-group .card .card-img-top {
-  height: 160px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 .container.articoli .card-group .card .card-body {
   padding: 1.25rem 0;
-}
-
-.container.articoli .card-group .card .card-body .card-title {
-  height: 43.2px;
-}
-
-.container.articoli .card-group .card .card-body .card-text {
-  height: 69.1px;
 }
 
 .container.articoli .card-group .card:not(:nth-child(4n)) {

@@ -4,17 +4,18 @@
     <div class="slider-wrapper">
         <div class="images">
             <img class="active first" src="{{ asset('img/corn-field.jpg') }}" alt="corn-field">
-            <img src="{{ asset('img/flowers.jpg') }}" alt="flowers">
-            <img class="last" src="{{ asset('img/grass.jpg') }}" alt="grass">
+            <img src="{{ asset('img/margherita.jpg') }}" alt="flowers">
+            <img class="last" src="{{ asset('img/margherite.jpg') }}" alt="grass">
         </div>
         <div class="main-text">
-            <p class="cite-text">
-                <i class="fas fa-quote-left"></i>      
-                            La vita non è quello che dovrebbe essere. <br>
-                             E' quello che è. <br>
-                             E' come l'affrontiamo che fa la differenza.
-                <i class="fas fa-quote-right"></i>            
+            <p class="cite-text">  
+                <i class="fas fa-quote-left"></i>        
+                La vita non è quello che dovrebbe essere.<br>
+                E' quello che è.<br>
+                E' come l'affrontiamo che fa la differenza. 
+                <i class="fas fa-quote-right"></i>                           
             </p> 
+            
             <cite>Virginia Satir</cite>
         </div>
     </div>

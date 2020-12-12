@@ -3,26 +3,26 @@
     padding-top: 80px;
     .card-group{
         flex-wrap: wrap;
+        @include media-breakpoint-down(md){
+            justify-content: center;
+        }
         .card{
+            @include media-breakpoint-down(md) {
+                flex-basis: 100%;   
+                margin-right: 0 !important;           
+            }
             flex-basis: calc((100% - 3.75rem) / 4)  ;
             flex-grow: 0;
             margin-bottom: 1.25rem;
             .card-img-top{
-                height: 160px;
                 object-fit: contain;
             }
             .card-body{
                 padding: 1.25rem 0;
-                .card-title{
-                    height: 43.2px;
-                }
-                .card-text{
-                    height: 69.1px;
-                }
             }  
         }
         .card:not(:nth-child(4n)) {
-            margin-right: 1.25rem;;
+            margin-right: 1.25rem;
           }
     }
 }
