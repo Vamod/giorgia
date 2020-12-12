@@ -10936,16 +10936,33 @@ html {
   font-size: 14px;
 }
 
-.navbar ul.navbar-nav li a.nav-link {
+.navbar ul.navbar-nav li .nav-link {
   color: black;
+  cursor: pointer;
+  position: relative;
 }
 
-.navbar ul.navbar-nav .selected {
-  border-bottom: 2px solid orange;
+.navbar ul.navbar-nav li .nav-link::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: orange;
+  transition: all 0.2s;
 }
 
-.navbar ul.navbar-nav a.nav-link:hover {
-  color: orange;
+.navbar ul.navbar-nav li .nav-link.selected::after {
+  width: 100%;
+}
+
+.navbar ul.navbar-nav li .nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 0.5rem;
 }
 
 .scrolled {
@@ -11010,6 +11027,9 @@ html {
 
 .container-home section.posts .card-group .card .card-img-top {
   padding: 1.25rem 1.25rem 0 1.25rem;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container-home section.posts .card-group .card:nth-child(2) {
@@ -11048,11 +11068,21 @@ html {
 }
 
 .container.articoli .card-group .card .card-img-top {
-  padding: 1.25rem 1.25rem 0 1.25rem;
+  height: 160px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.container.articoli .card-group .card .created_at {
-  font-size: 12px;
+.container.articoli .card-group .card .card-body {
+  padding: 1.25rem 0;
+}
+
+.container.articoli .card-group .card .card-body .card-title {
+  height: 43.2px;
+}
+
+.container.articoli .card-group .card .card-body .card-text {
+  height: 69.1px;
 }
 
 .container.articoli .card-group .card:not(:nth-child(4n)) {

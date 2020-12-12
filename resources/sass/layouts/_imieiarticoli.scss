@@ -8,10 +8,17 @@
             flex-grow: 0;
             margin-bottom: 1.25rem;
             .card-img-top{
-                padding: 1.25rem 1.25rem 0 1.25rem;
-            }           
-            .created_at{
-                font-size: 12px;
+                height: 160px;
+                object-fit: contain;
+            }
+            .card-body{
+                padding: 1.25rem 0;
+                .card-title{
+                    height: 43.2px;
+                }
+                .card-text{
+                    height: 69.1px;
+                }
             }  
         }
         .card:not(:nth-child(4n)) {

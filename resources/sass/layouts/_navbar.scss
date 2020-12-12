@@ -19,17 +19,39 @@
     }
 
     ul.navbar-nav{
-        li a.nav-link{
+        li .nav-link{
             color: black;
+            cursor:pointer;
+            position:relative;
+              &::after{
+              position: absolute;
+              left:0;
+              bottom:0;
+              content:'';
+              width: 0;
+              height:1px;
+              background-color:orange;
+              transition: all .2s;
+              }
+              &.selected{
+                &::after{
+                    width:100%;
+                }
+             }
+            &:hover::after{
+            width: 100%;
+           }
+
+        
         }
-        .selected{
-            border-bottom: 2px solid orange;
-        }
-        a.nav-link:hover{
-            color:  orange;
-        }
+       
     }
 }
+
+.nav-item:not(:last-child){
+    margin-right: .5rem;
+}
+
 
 // per cambiare la navbar allo scroll
 .scrolled{

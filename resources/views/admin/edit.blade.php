@@ -20,17 +20,16 @@
             <input type="file" name="img" value="" accept="image/*">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Titolo</label>
-            <input input="text" name="title" value={{ $post->title }} class="form-control"
-                placeholder="Inserisci il titolo">
+            <label for="title">Titolo</label>
+            <input input="text" name="title" value="{{ $post->title }}" class="form-control"/>
         </div>
         <div class="form-group">
             <label for="body">Body</label>
-            <textarea class="form-control" name="body" rows="3">{{ $post->title }}</textarea>
+            <textarea class="form-control" name="body" rows="8">{{ $post->body }}</textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Submit</button>
-        </div>    
+        </div>
     </form>
 </div>
 
