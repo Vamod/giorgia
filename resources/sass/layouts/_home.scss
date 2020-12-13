@@ -53,8 +53,17 @@
         background-color: #d4d9df;
         padding: 2.5rem 0;
         .card-group{
+            @include media-breakpoint-down(md){
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
             .card{
-                width: calc((100% - 1.25rem) / 2);
+                flex-basis: calc((100% - 1.25rem) / 2);
+                @include media-breakpoint-down(md){
+                    flex-basis: 100%;
+                    margin-left: 0 !important;
+                }    
                .card-img-top{
                     padding: 1.25rem 1.25rem 0 1.25rem;
                     height: 350px;
