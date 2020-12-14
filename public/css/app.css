@@ -11014,6 +11014,18 @@ body {
   font-style: italic;
 }
 
+@media (max-width: 991.98px) {
+  .container-home .slider-wrapper .main-text .cite-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container-home .slider-wrapper .main-text .cite-text {
+    font-size: 16px;
+  }
+}
+
 .container-home .slider-wrapper .main-text .cite-text i.fa-quote-left {
   font-size: 12px;
   position: absolute;
@@ -11110,7 +11122,7 @@ body {
 .container.articoli .card-group .card {
   flex-basis: calc((100% - 3.75rem) / 4);
   flex-grow: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem !important;
 }
 
 @media (max-width: 991.98px) {
@@ -11123,7 +11135,6 @@ body {
 @media (max-width: 767.98px) {
   .container.articoli .card-group .card {
     flex-basis: 100%;
-    margin-right: 0 !important;
   }
 }
 
@@ -11136,13 +11147,25 @@ body {
   padding: 1.25rem 0;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container.articoli .card-group .card:not(:nth-child(2n)) {
+    margin-right: 1.25rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container.articoli .card-group {
+    margin-right: 0 !important;
+  }
+}
+
 .container.articoli .card-group .card:not(:nth-child(4n)) {
   margin-right: 1.25rem;
 }
 
 @media (max-width: 991.98px) {
-  .container.articoli .card-group .card:not(:nth-child(2n)) {
-    margin-right: 1.25rem !important;
+  .container.articoli .card-group {
+    margin-right: 0 !important;
   }
 }
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="container articoli">
-        <div class="card-group">
+        <div class=" card-group">
             @foreach($posts as $post)
                 <div class="card shadow p-3 bg-white rounded" style="width: 18rem;">
                     @if ($post->img != null)
