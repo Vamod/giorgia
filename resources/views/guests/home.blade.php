@@ -7,17 +7,18 @@
             <img src="{{ asset('img/margherita.jpg') }}" alt="flowers">
             <img class="last" src="{{ asset('img/margherite.jpg') }}" alt="grass">
         </div>
-        <div class="main-text">
-            <p class="cite-text">  
-                <i class="fas fa-quote-left"></i>        
-                La vita non è quello che dovrebbe essere.<br>
-                E' quello che è.<br>
-                E' come l'affrontiamo che fa la differenza. 
-                <i class="fas fa-quote-right"></i>                           
-            </p> 
-            
-            <cite>Virginia Satir</cite>
-        </div>
+        <div class="container">
+            <div class="main-text">
+                <p class="cite-text">  
+                    <i class="fas fa-quote-left"></i>        
+                    La vita non è quello che dovrebbe essere.<br>
+                    E' quello che è.<br>
+                    E' come l'affrontiamo che fa la differenza. 
+                    <i class="fas fa-quote-right"></i>                           
+                </p>             
+                <cite>Virginia Satir</cite>
+            </div>
+        </div>        
     </div>
     <section class="about-me">
         <div class="container">

@@ -2,55 +2,68 @@
 .container-home{
     .slider-wrapper {
         position: relative;
-        margin: auto;
         width: 100%;
-        height: 100vh;    
-        .images {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            img {
+        height: 100vh;  
+            .container{
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+
+            }
+            .images {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                display: none;
-                
-            }
-            img.active {
-                display: inline-block;
-            }
-        }
-        .main-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            
-            .cite-text{
-                font-size: 30px;
-                font-style: italic;
-                @include media-breakpoint-down(md){
-                    font-size: 22px;
-                } 
-                @include media-breakpoint-down(sm){
+                text-align: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: none;
+                }
+                img.active {
+                    display: inline-block;
+                }           
+            }           
+            .main-text{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @media (max-width: 991.98px) {
+                    position: absolute;
+                    top: 50%;
+                    left: 32px;
+                    transform: translateY(-50%);
+                }
+
+                .cite-text{
+                    font-size: 30px;
+                    font-style: italic;
+                    @media (max-width: 991.98px) {
+                        font-size: 26px;
+                    } 
+                    @media (max-width: 575.98px) {
+                        font-size: 16px;
+                    }              
+                    i.fa-quote-left{
+                        font-size: 12px;
+                        position:absolute;
+                        top: 7px;
+                        left: -20px;
+                    }
+                    i.fa-quote-right{
+                        font-size: 12px;
+                        position: relative;
+                        top: -10px;
+                    }
+                }
+                cite{
                     font-size: 16px;
-                } 
-                i.fa-quote-left{
-                    font-size: 12px;
-                    position:absolute;
-                    top: 7px;
-                    left: -20px;
                 }
-                i.fa-quote-right{
-                    font-size: 12px;
-                    position: relative;
-                    top: -10px;
-                }
-            }
-            cite{
-                font-size: 16px;
-            }
-        }   
+            
+        }    
     }
     section.about-me{
         padding: 2.5rem 0;
@@ -59,14 +72,14 @@
         background-color: #d4d9df;
         padding: 2.5rem 0;
         .card-group{
-            @include media-breakpoint-down(md){
+            @media (max-width: 991.98px) {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
             }
             .card{
                 flex-basis: calc((100% - 1.25rem) / 2);
-                @include media-breakpoint-down(md){
+                @media (max-width: 991.98px) {
                     flex-basis: 100%;
                     margin-left: 0 !important;
                 }    

@@ -5,7 +5,9 @@
             @foreach($posts as $post)
                 <div class="card shadow p-3 bg-white rounded" style="width: 18rem;">
                     @if ($post->img != null)
-                    <img src="{{ Storage::url($post->img) }}" class="card-img-top" alt="{{ $post->title }}">
+                    <div class="card-img">
+                        <img src="{{ Storage::url($post->img) }}" class="card-img-top" alt="{{ $post->title }}">
+                    </div>                   
                     @endif                       
                     <div class="card-body">
                         <h5 class="card-title">{{ Str::limit($post->title, 38)}}</h5>
