@@ -22,7 +22,7 @@
     </div>
     <section class="about-me">
         <div class="container">
-            <h2 class="about-me-title text-center">Chi sono</h2>
+            <h2 class="about-me-title text-center">Il mio approccio</h2>
             <p class="about-me-p">Sono la dott.ssa Giorgia Cesarini, psicologa iscritta all'albo con matricola 22047 e psicoterapeuta ad orientamento Sistemico - Relazionale (in formazione).
                                 Laureata presso l'Università La Sapienza di Roma in Psicologia dello Sviluppo, dell'Educazione e del Benessere.
                                 Specializzata nel trattamento dei Disturbi dello Spettro Autistico, ADHD e Disabilità psichica. Offro consulenza psicologica a famiglie e coppie genitoriali attraverso Parent Training e interventi di sostegno alla genitorialità.
@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ Str::limit($post->title, 38)}}</h5>
                             <p class="card-text">{{ Str::limit($post->body, 60)}}</p>
-                            <a href="{{ route('guests.show', $post->slug) }}" id="home-button" class="btn btn-primary">Vai all'articolo</a>
+                            <a href="{{ route('guests.show', $post->slug) }}" id="home-button" class="">Vai all'articolo</a>
                         </div>
                     </div>
                 @endforeach

@@ -1,0 +1,26 @@
+section.chi-sono{
+    margin-top: 80px;
+    padding-top: 80px;
+    min-height: calc(100vh - 220px);
+    @media (max-width: 767.98px) {
+        padding: 40px 0 0 0;
+    } 
+    .img-chi-sono{
+        width: 25%;
+        @media (max-width: 575.98px) {
+            width: 33.333%;
+        }   
+        img{
+            width: 100%;
+            object-fit: cover;  
+        }
+    }
+    .title-chi-sono{
+        border-bottom: 2px solid orange;
+        margin-top: 10px;
+    }
+    .chi-sono-body{
+        line-height: 24px;
+    }
+   
+}

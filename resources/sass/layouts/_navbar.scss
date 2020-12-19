@@ -5,51 +5,56 @@
     left: 0;
     top: 0;
     z-index: 2;
-    
-    .nav-title{
-        color: black;
-        border-bottom: 2px solid orange;
-        .title-name{           
-        font-size: 26px;
-        }
-    }
-    .nav-descr{
-        color: black;
-        font-size: 14px;
-    }
 
-    ul.navbar-nav{
-        @include media-breakpoint-down(md) { 
-            li .nav-link.main-menu{
-                display: none;
+    .container{
+              
+        .nav-title{
+            color: black;
+            border-bottom: 2px solid orange;
+            .title-name{           
+            font-size: 26px;
+            @media (max-width: 767.98px) {
+                font-size: 22px;
+                }  
             }
         }
-        li .nav-link.main-menu{
+        .nav-descr{
             color: black;
-            cursor:pointer;
-            position:relative;
-              &::after{
-              position: absolute;
-              left:0;
-              bottom:0;
-              content:'';
-              width: 0;
-              height:1px;
-              background-color:orange;
-              transition: all .2s;
-              }
-              &.selected{
-                &::after{
-                    width:100%;
+            font-size: 14px;
+            @media (max-width: 767.98px) {
+                font-size: 12px;
                 }
-             }
-            &:hover::after{
-            width: 100%;
-           }
-
-        
         }
-       
+        ul.navbar-nav{
+            @include media-breakpoint-down(md) { 
+                li .nav-link.main-menu{
+                    display: none;
+                }
+            }
+            li .nav-link.main-menu{
+                color: black;
+                cursor:pointer;
+                position:relative;
+                  &::after{
+                  position: absolute;
+                  left:0;
+                  bottom:0;
+                  content:'';
+                  width: 0;
+                  height:1px;
+                  background-color:orange;
+                  transition: all .2s;
+                  }
+                  &.selected{
+                    &::after{
+                        width:100%;
+                    }
+                 }
+                &:hover::after{
+                width: 100%;
+               }           
+            }        
+        }
     }
 }
 
