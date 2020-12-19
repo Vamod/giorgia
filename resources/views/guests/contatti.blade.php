@@ -3,7 +3,7 @@
 <section class="contatti">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12 all-contacts">
+            <div class="col-lg-5 col-md-12 col-sm-12 all-contacts">
                <div class="all-contacts-info">
                     <h3>Dottoressa Giorgia Cesarini</h3>
                     <ul class="giorgia-desc">
@@ -14,7 +14,7 @@
                         in <strong>via Tuscolana 63</strong>, 00182 Roma. <br>
                         Lo studio è facilmente raggiungibile dalla fermata della <strong>metro A - Re di Roma</strong> e dalla <strong>stazione di Roma Tuscolana.</strong></p>
                     <ul class="giorgia-contact">
-                        <li class="details"><i class="fas fa-phone"></i> +39 380 3069283</li>
+                        <li class="details"><i class="fas fa-phone"></i><a href="tel:+39 380 3069283">+39 380 3069283</a></li>
                         <li class="details"><i class="fas fa-envelope"></i> giorgiacesarini.2@gmail.com</li>
                         <li>P.I. 14133101007</li>
                     </ul>                   
