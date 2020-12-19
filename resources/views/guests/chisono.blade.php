@@ -8,7 +8,7 @@
                     <img src="{{ asset('img/giorgia-cesarini.jpg') }}" alt="GiorgiaCesarini">
                 </div>
                 <h2 class="title-chi-sono">CHI SONO</h2>
-                <p class="chi-sono-body">Sono la <strong>dott.ssa Giorgia Cesarini</strong>, psicologa <br> iscritta all'albo con matricola 22047 e <br> psicoterapeuta ad orientamento <strong>Sistemico - Relazionale</strong> (in formazione). <br>
+                <p class="chi-sono-body">Sono la <strong>dott.ssa Giorgia Cesarini</strong>, psicologa iscritta all'albo con matricola 22047 e psicoterapeuta ad orientamento <strong>Sistemico - Relazionale</strong> (in formazione). <br>
                     Laureata presso l'Università La Sapienza di Roma in Psicologia dello Sviluppo, dell'Educazione e del Benessere.
                     Specializzata nel trattamento dei Disturbi dello Spettro Autistico, ADHD e Disabilità psichica. Offro consulenza psicologica a famiglie e coppie genitoriali attraverso Parent Training e interventi di sostegno alla genitorialità.
                     Esperta in Disturbi Specifici dell'Apprendimento e formata come Tutor allo Studio, svolgo interventi specialistici di training e potenziamento per bambini e ragazzi con DSA.

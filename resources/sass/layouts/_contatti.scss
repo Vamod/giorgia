@@ -1,16 +1,24 @@
 section.contatti{
     margin-top: 80px;
     padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: calc(100vh - 220px);
     @media (max-width: 767.98px) {
-        padding: 40px 0 0 0;
+        padding: 40px 0 40px 0;
     } 
     .all-contacts{
         @media (min-width: 575.98px) and (max-width: 767.98px){
             padding-left: 0px;
         }
        .all-contacts-info{
-           list-style: none;
            line-height: 30px;
+           ul.giorgia-desc,
+           ul.giorgia-contact{
+               list-style: none;
+           }
+           .giorgia-work{
+               font-size: 20px;
+           }
        } 
     }
     .map{
