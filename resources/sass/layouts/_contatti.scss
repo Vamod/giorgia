@@ -15,6 +15,14 @@ section.contatti{
            ul.giorgia-desc,
            ul.giorgia-contact{
                list-style: none;
+               .details{
+                   i{
+                       margin-right: 8px;
+                   }
+                   a{
+                       color: black;
+                   }
+               }
            }
            .giorgia-work{
                font-size: 20px;

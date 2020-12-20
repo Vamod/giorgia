@@ -7,7 +7,19 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>
+        Giorgia Cesarini - @if(url()->current() == route('guests.home'))
+        {{ 'home' }}
+        @elseif(url()->current() == route('guests.chisono'))
+        {{ 'chi-sono' }}
+        @elseif(url()->current() == route('guests.dicosamioccupo'))
+        {{ 'dicosamioccupo' }}
+        @elseif(url()->current() == route('guests.imieiarticoli'))
+        {{ 'imieiarticoli' }}
+        @else
+        {{ 'contatti' }}
+        @endif
+    </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,6 +32,9 @@
 </head>
 <body>
     <div id="app">
+        <div class="mobile-menu">
+            
+        </div>
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -79,7 +94,12 @@
                     </ul>
                     
                 </div>
-                H
+                <div class="hamburger">   
+                    <div class="hamburger__line">
+                         <div class="hamburger__line-top"></div>
+                         <div class="hamburger__line-bottom"></div>   
+                    </div>               
+                </div>
             </div>
         </nav>
 

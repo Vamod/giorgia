@@ -11024,23 +11024,15 @@ body {
 .container-home .slider-wrapper .main-text {
   position: absolute;
   min-width: 700px;
+  position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 32px;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 767.98px) {
   .container-home .slider-wrapper .main-text {
     min-width: 0px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .container-home .slider-wrapper .main-text {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    transform: translateY(-50%);
   }
 }
 
@@ -11312,17 +11304,18 @@ body {
 section.chi-sono {
   margin-top: 80px;
   padding-top: 80px;
+  padding-bottom: 80px;
   min-height: calc(100vh - 220px);
 }
 
 @media (max-width: 767.98px) {
   section.chi-sono {
-    padding: 40px 0 0 0;
+    padding: 40px 0 40px 0;
   }
 }
 
 section.chi-sono .img-chi-sono {
-  width: 25%;
+  width: 100%;
 }
 
 @media (max-width: 575.98px) {
@@ -11332,7 +11325,7 @@ section.chi-sono .img-chi-sono {
 }
 
 section.chi-sono .img-chi-sono img {
-  width: 100%;
+  width: 25%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -11344,6 +11337,13 @@ section.chi-sono .title-chi-sono {
 
 section.chi-sono .chi-sono-body {
   line-height: 26px;
+  text-align: justify;
+}
+
+section.chi-sono .bkg-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 section.contatti {
@@ -11372,6 +11372,16 @@ section.contatti .all-contacts .all-contacts-info {
 section.contatti .all-contacts .all-contacts-info ul.giorgia-desc,
 section.contatti .all-contacts .all-contacts-info ul.giorgia-contact {
   list-style: none;
+}
+
+section.contatti .all-contacts .all-contacts-info ul.giorgia-desc .details i,
+section.contatti .all-contacts .all-contacts-info ul.giorgia-contact .details i {
+  margin-right: 8px;
+}
+
+section.contatti .all-contacts .all-contacts-info ul.giorgia-desc .details a,
+section.contatti .all-contacts .all-contacts-info ul.giorgia-contact .details a {
+  color: black;
 }
 
 section.contatti .all-contacts .all-contacts-info .giorgia-work {
@@ -11428,5 +11438,64 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .container .footer-contacts div a {
+  color: black;
+}
+
+.hamburger {
+  height: 20px;
+  width: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+.hamburger__line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: relative;
+}
+
+.hamburger__line-animated {
+  background-color: transparent;
+}
+
+.hamburger__line-top {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: -8px;
+  background-color: black;
+  transition: all 0.2s;
+}
+
+.hamburger__line-top-animated {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.hamburger__line-bottom {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 8px;
+  background-color: black;
+  transition: all 0.2s;
+}
+
+.hamburger__line-bottom-animated {
+  top: 0;
+  transform: rotate(-135deg);
 }
 

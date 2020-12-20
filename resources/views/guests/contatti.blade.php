@@ -14,8 +14,8 @@
                         in <strong>via Tuscolana 63</strong>, 00182 Roma. <br>
                         Lo studio è facilmente raggiungibile dalla fermata della <strong>metro A - Re di Roma</strong> e dalla <strong>stazione di Roma Tuscolana.</strong></p>
                     <ul class="giorgia-contact">
-                        <li class="details"><i class="fas fa-phone"></i><a href="tel:+39 380 3069283">+39 380 3069283</a></li>
-                        <li class="details"><i class="fas fa-envelope"></i> giorgiacesarini.2@gmail.com</li>
+                        <li class="details"><i class="fas fa-phone"></i><a href="tel:+393803069283">+39 380 3069283</a></li>
+                        <li class="details"><i class="fas fa-envelope"></i><a href="mailto:giorgiacesarini.2@gmail.com">giorgiacesarini.2@gmail.com</a></li>
                         <li>P.I. 14133101007</li>
                     </ul>                   
                </div> 

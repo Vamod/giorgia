@@ -1,17 +1,18 @@
 section.chi-sono{
     margin-top: 80px;
     padding-top: 80px;
+    padding-bottom: 80px;
     min-height: calc(100vh - 220px);
     @media (max-width: 767.98px) {
-        padding: 40px 0 0 0;
+        padding: 40px 0 40px 0;
     } 
     .img-chi-sono{
-        width: 25%;
+        width: 100%;
         @media (max-width: 575.98px) {
             width: 33.333%;
         }   
         img{
-            width: 100%;
+            width: 25%;
             object-fit: cover;  
         }
     }
@@ -21,6 +22,12 @@ section.chi-sono{
     }
     .chi-sono-body{
         line-height: 26px;
+        text-align: justify;
     }
-   
+    .bkg-img{
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 }

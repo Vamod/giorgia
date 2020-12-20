@@ -37289,6 +37289,12 @@ $(document).ready(function () {
   $(document).scroll(function () {
     var $nav = $(".navbar");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  }); //animazione hamburger
+
+  $('.hamburger').click(function () {
+    $('.hamburger__line').toggleClass('hamburger__line-animated');
+    $('.hamburger__line-top').toggleClass('hamburger__line-top-animated');
+    $('.hamburger__line-bottom').toggleClass('hamburger__line-bottom-animated');
   });
 }); // CAROSELLO HOMEPAGE
 //funzione next

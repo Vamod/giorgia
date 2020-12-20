@@ -4,8 +4,8 @@
     <div class="slider-wrapper">
         <div class="images">
             <img class="active first" src="{{ asset('img/corn-field.jpg') }}" alt="corn-field">
-            <img src="{{ asset('img/margherita.jpg') }}" alt="flowers">
-            <img class="last" src="{{ asset('img/margherite.jpg') }}" alt="grass">
+            <img src="{{ asset('img/flower-flight.jpg') }}" alt="flower-flight">
+            <img class="last" src="{{ asset('img/margherita.jpg') }}" alt="margherita">
         </div>
         <div class="container">
             <div class="main-text">
