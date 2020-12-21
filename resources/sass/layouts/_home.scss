@@ -75,43 +75,55 @@
     }
     section.about-me{
         padding: 40px 0;
-        .about-me-p{
-            line-height: 26px;
-        }
-        @media (max-width: 575.98px) {
+        @media (max-width: 767.98px) {
             padding-top: 20px;
-        }  
+        } 
+        .container{
+            @media (min-width: 576px) and (max-width: 767.98px){
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .about-me-p{
+                line-height: 26px;
+            }            
+        }
     }
     section.posts{
         background-color: #d4d9df;
         padding: 2.5rem 0;
-        .card-group{
-            @media (max-width: 991.98px) {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .card{
-                flex-basis: calc((100% - 1.25rem) / 2);
+        .container{  
+            @media (min-width: 576px) and (max-width: 767.98px){
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }      
+            .card-group{
                 @media (max-width: 991.98px) {
-                    flex-basis: 100%;
-                    margin-left: 0 !important;
-                }    
-                @media (max-width: 575.98px) {
-                    padding: 0 !important;
-                } 
-               .card-img-top{
-                    padding: 1.25rem 1.25rem 0 1.25rem;
-                    height: 350px;
-                    object-fit: cover;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+                .card{
+                    flex-basis: calc((100% - 1.25rem) / 2);
                     @media (max-width: 991.98px) {
-                        height: auto;
-                    }
-               }
+                        flex-basis: 100%;
+                        margin-left: 0 !important;
+                    }    
+                    @media (max-width: 575.98px) {
+                        padding: 0 !important;
+                    } 
+                   .card-img-top{
+                        padding: 1.25rem 1.25rem 0 1.25rem;
+                        height: 350px;
+                        object-fit: cover;
+                        @media (max-width: 991.98px) {
+                            height: auto;
+                        }
+                   }
+                }
+                .card:nth-child(2) {
+                    margin-left: 1.25rem;;
+                  }
             }
-            .card:nth-child(2) {
-                margin-left: 1.25rem;;
-              }
         }
     }
 }
