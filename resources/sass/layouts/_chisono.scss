@@ -8,19 +8,19 @@ section.chi-sono{
         padding: 40px 0 40px 0;
     } 
     .img-chi-sono{
-        width: 100%;
-        @media (max-width: 575.98px) {
-            width: 33.333%;
-        }   
+        width: 100%;  
         img{
-            width: 25%;
-            object-fit: cover;  
+            width: 33.333%;
+            object-fit: cover; 
+            @media (max-width: 767.98px) {
+                width: 40%;
+            } 
         }
     }
     .title-chi-sono{
         border-bottom: 2px solid orange;
         margin-top: 10px;
-        font-size: 36px;       
+        font-size: 28px;       
     }
     .chi-sono-body{
         line-height: 26px;
@@ -32,7 +32,6 @@ section.chi-sono::after {
     content: "";
     background: url('../../../public/img/tree.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: right;
     opacity: .2;
     top: -80px;

@@ -11094,6 +11094,7 @@ body {
 
 .container-home section.about-me {
   padding: 40px 0;
+  position: relative;
 }
 
 @media (max-width: 767.98px) {
@@ -11111,6 +11112,20 @@ body {
 
 .container-home section.about-me .container .about-me-p {
   line-height: 26px;
+}
+
+.container-home section.about-me::after {
+  content: "";
+  background: url(/images/tree.png?3019ed1cd399706697ce805ac65934e3);
+  background-size: cover;
+  background-position: right;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .container-home section.posts {
@@ -11339,22 +11354,22 @@ section.chi-sono .img-chi-sono {
   width: 100%;
 }
 
-@media (max-width: 575.98px) {
-  section.chi-sono .img-chi-sono {
-    width: 33.333%;
-  }
-}
-
 section.chi-sono .img-chi-sono img {
-  width: 25%;
+  width: 33.333%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  section.chi-sono .img-chi-sono img {
+    width: 40%;
+  }
 }
 
 section.chi-sono .title-chi-sono {
   border-bottom: 2px solid orange;
   margin-top: 10px;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 section.chi-sono .chi-sono-body {
@@ -11366,7 +11381,6 @@ section.chi-sono::after {
   content: "";
   background: url(/images/tree.png?3019ed1cd399706697ce805ac65934e3);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: right;
   opacity: 0.2;
   top: -80px;
