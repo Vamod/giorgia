@@ -75,8 +75,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('posts.index') }}">I tuoi post</a>
-                                    <a class="dropdown-item" href="{{ route('posts.create') }}">Crea un nuovo post</a>
+                                    <a class="dropdown-item" href="{{ route('posts.index') }}">Gestisci articoli</a>
+                                    <a class="dropdown-item" href="{{ route('posts.create') }}">Crea un nuovo articolo</a>
+                                    <a class="dropdown-item" href="{{ route('guests.chisono') }}">Chi sono</a>
+                                    <a class="dropdown-item" href="{{ route('guests.dicosamioccupo') }}">Di cosa mi occupo</a>
+                                    <a class="dropdown-item" href="{{ route('guests.imieiarticoli') }}">I miei articoli</a>
+                                    <a class="dropdown-item" href="{{ route('guests.contatti') }}">Contatti</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -101,14 +105,26 @@
         </nav>
         <main>
              {{-- mobile navbar --}}
-         <div class="mobile-menu">
-             <div class="container">
-                <a href="{{ route('guests.chisono') }}">Chi sono</a>
-                <a href="{{ route('guests.dicosamioccupo') }}">Di cosa mi occupo</a>
-                <a href="{{ route('guests.imieiarticoli') }}">I miei articoli</a>
-                <a href="{{ route('guests.contatti') }}">Contatti</a>
-             </div>
-          </div>
+            <div class="mobile-menu">
+                <div class="container">
+                    @guest
+                    <a href="{{ route('guests.chisono') }}">Chi sono</a>
+                    <a href="{{ route('guests.dicosamioccupo') }}">Di cosa mi occupo</a>
+                    <a href="{{ route('guests.imieiarticoli') }}">I miei articoli</a>
+                    <a href="{{ route('guests.contatti') }}">Contatti</a>
+                    @else
+                    <a href="{{ route('posts.index') }}">Gestisci articoli</a>
+                    <a href="{{ route('posts.create') }}">Crea un nuovo articolo</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                    @endguest
+                </div>
+            </div>
             @yield('content')
         </main>
         @include('partials/footer')
