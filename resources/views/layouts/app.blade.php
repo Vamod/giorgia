@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="{{ asset('img/tree.png') }}" sizes="16x16" type="image/png">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -102,9 +102,12 @@
         <main>
              {{-- mobile navbar --}}
          <div class="mobile-menu">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+             <div class="container">
+                <a href="{{ route('guests.chisono') }}">Chi sono</a>
+                <a href="{{ route('guests.dicosamioccupo') }}">Di cosa mi occupo</a>
+                <a href="{{ route('guests.imieiarticoli') }}">I miei articoli</a>
+                <a href="{{ route('guests.contatti') }}">Contatti</a>
+             </div>
           </div>
             @yield('content')
         </main>
