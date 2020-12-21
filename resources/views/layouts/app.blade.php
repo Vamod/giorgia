@@ -11,7 +11,7 @@
         Giorgia Cesarini - @if(url()->current() == route('guests.home'))
         {{ 'home' }}
         @elseif(url()->current() == route('guests.chisono'))
-        {{ 'chi-sono' }}
+        {{ 'chisono' }}
         @elseif(url()->current() == route('guests.dicosamioccupo'))
         {{ 'dicosamioccupo' }}
         @elseif(url()->current() == route('guests.imieiarticoli'))
@@ -32,9 +32,6 @@
 </head>
 <body>
     <div id="app">
-        <div class="mobile-menu">
-            
-        </div>
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -102,8 +99,13 @@
                 </div>
             </div>
         </nav>
-
         <main>
+             {{-- mobile navbar --}}
+         <div class="mobile-menu">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
             @yield('content')
         </main>
         @include('partials/footer')

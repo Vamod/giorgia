@@ -37295,6 +37295,11 @@ $(document).ready(function () {
     $('.hamburger__line').toggleClass('hamburger__line-animated');
     $('.hamburger__line-top').toggleClass('hamburger__line-top-animated');
     $('.hamburger__line-bottom').toggleClass('hamburger__line-bottom-animated');
+  }); //al click del hamburger si attiva il menu mobile
+
+  $('.hamburger').click(function () {
+    $('#app').toggleClass('mobile-mode');
+    $('.mobile-menu').toggleClass('active');
   });
 }); // CAROSELLO HOMEPAGE
 //funzione next
